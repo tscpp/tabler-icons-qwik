@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  rollup-plugin-dts:
-    specifier: ^5.3.0
-    version: 5.3.0(rollup@3.26.3)(typescript@5.1.6)
-
 devDependencies:
   '@builder.io/qwik':
     specifier: 1.2.6
@@ -31,6 +26,9 @@ devDependencies:
   rollup:
     specifier: ^3.26.3
     version: 3.26.3
+  rollup-plugin-dts:
+    specifier: ^5.3.0
+    version: 5.3.0(rollup@3.26.3)(typescript@5.1.6)
   rollup-plugin-swc3:
     specifier: ^0.9.1
     version: 0.9.1(@swc/core@1.3.71)(rollup@3.26.3)
@@ -61,13 +59,13 @@ packages:
     requiresBuild: true
     dependencies:
       '@babel/highlight': 7.22.5
-    dev: false
+    dev: true
     optional: true
 
   /@babel/helper-validator-identifier@7.22.5:
     resolution: {integrity: sha512-aJXu+6lErq8ltp+JhkJUfk1MTGyuA4v7f3pA+BJ5HLfNC6nAQ0Cpi9uOquUj8Hehg0aUiHzWQbOVJGao6ztBAQ==}
     engines: {node: '>=6.9.0'}
-    dev: false
+    dev: true
     optional: true
 
   /@babel/highlight@7.22.5:
@@ -77,7 +75,7 @@ packages:
       '@babel/helper-validator-identifier': 7.22.5
       chalk: 2.4.2
       js-tokens: 4.0.0
-    dev: false
+    dev: true
     optional: true
 
   /@builder.io/qwik@1.2.6(undici@5.22.1):
@@ -318,6 +316,7 @@ packages:
 
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
+    dev: true
 
   /@jridgewell/trace-mapping@0.3.18:
     resolution: {integrity: sha512-w+niJYzMHdd7USdiH2U6869nqhD2nbfZXND5Yp93qIbEmnDNk7PD48o+YchRVpzMU7M6jVCbenTR7PA1FLQ9pA==}
@@ -658,7 +657,7 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       color-convert: 1.9.3
-    dev: false
+    dev: true
     optional: true
 
   /any-promise@1.3.0:
@@ -754,7 +753,7 @@ packages:
       ansi-styles: 3.2.1
       escape-string-regexp: 1.0.5
       supports-color: 5.5.0
-    dev: false
+    dev: true
     optional: true
 
   /chalk@5.3.0:
@@ -803,12 +802,12 @@ packages:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
     dependencies:
       color-name: 1.1.3
-    dev: false
+    dev: true
     optional: true
 
   /color-name@1.1.3:
     resolution: {integrity: sha512-72fSenhMw2HZMTVHeCA9KCmpEIbzWiQsjN+BHcBbS9vr1mtt+vJjPdksIBNUmKAW8TFUDPJK5SUU3QhE9NEXDw==}
-    dev: false
+    dev: true
     optional: true
 
   /commander@4.1.1:
@@ -896,7 +895,7 @@ packages:
   /escape-string-regexp@1.0.5:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
     engines: {node: '>=0.8.0'}
-    dev: false
+    dev: true
     optional: true
 
   /estree-walker@2.0.2:
@@ -966,6 +965,7 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
+    dev: true
     optional: true
 
   /function-bind@1.1.1:
@@ -1016,7 +1016,7 @@ packages:
   /has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
-    dev: false
+    dev: true
     optional: true
 
   /has@1.0.3:
@@ -1135,7 +1135,7 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: false
+    dev: true
     optional: true
 
   /lilconfig@2.1.0:
@@ -1176,7 +1176,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
-    dev: false
+    dev: true
 
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -1419,7 +1419,7 @@ packages:
       typescript: 5.1.6
     optionalDependencies:
       '@babel/code-frame': 7.22.5
-    dev: false
+    dev: true
 
   /rollup-plugin-swc3@0.9.1(@swc/core@1.3.71)(rollup@3.26.3):
     resolution: {integrity: sha512-vEWpSOmWHfgNANgZ4a1+KAH8fhwfgSXAwOsIC8d3Spj0Th9PkMxREhurXkmCqLYqX5vXi2cW4MUG+cSGIhtyyg==}
@@ -1453,6 +1453,7 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
 
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -1563,7 +1564,7 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       has-flag: 3.0.0
-    dev: false
+    dev: true
     optional: true
 
   /supports-preserve-symlinks-flag@1.0.0:
@@ -1647,6 +1648,7 @@ packages:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
     engines: {node: '>=14.17'}
     hasBin: true
+    dev: true
 
   /undici@5.22.1:
     resolution: {integrity: sha512-Ji2IJhFXZY0x/0tVBXeQwgPlLWw13GVzpsWPQ3rV50IFMMof2I55PZZxtm4P6iNq+L5znYN9nSTAq0ZyE6lSJw==}
