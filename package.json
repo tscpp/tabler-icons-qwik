@@ -20,7 +20,6 @@
     "build": "node scripts/build.mjs"
   },
   "devDependencies": {
-    "@builder.io/qwik": "1.2.6",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@tabler/icons": "^2.29.0",
     "execa": "^7.2.0",
@@ -35,5 +34,8 @@
     "undici": "5.22.1",
     "vite": "4.4.7",
     "xml-js": "^1.6.11"
+  },
+  "peerDependencies": {
+    "@builder.io/qwik": "^1.2.6"
   }
 }
