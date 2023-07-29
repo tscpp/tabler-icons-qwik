@@ -2,6 +2,7 @@
   "name": "tabler-icons-qwik",
   "version": "1.0.0",
   "description": "Unofficial implementation of the Tabler Icons library for Qwik.",
+  "license": "MIT",
   "type": "module",
   "exports": {
     ".": {
