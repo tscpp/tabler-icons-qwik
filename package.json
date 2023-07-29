@@ -30,6 +30,7 @@
     "release": "np --message \"chore: release %s\" --no-cleanup --no-tests"
   },
   "devDependencies": {
+    "@octokit/core": "^5.0.0",
     "@rollup/plugin-node-resolve": "^15.1.0",
     "@tabler/icons": "^2.29.0",
     "execa": "^7.2.0",
