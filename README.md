@@ -2,7 +2,7 @@
 
 Unofficial implementation of the [Tabler Icons](https://tabler-icons.io)
 library for Qwik applications. The package is automatically synced with
-`@tabler/icons` two times a time.
+`@tabler/icons` two times every day.
 
 See <https://tabler-icons.io>, or <https://github.com/tabler/tabler-icons> for
 more information.
