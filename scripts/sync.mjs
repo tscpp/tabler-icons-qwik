@@ -11,7 +11,7 @@ if (!object["@tabler/icons"]) {
 }
 
 const previous = new SemVer(object["@tabler/icons"].current);
-const updated = new SemVer(object["@tabler/icons"].wanted);
+const updated = new SemVer(object["@tabler/icons"].latest);
 const relaseType = previous.minor === updated.minor ? "patch" : "minor";
 
 // Update @tabler/icons
