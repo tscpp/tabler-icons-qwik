@@ -66,7 +66,7 @@ for (const icon of icons) {
   const data = `import { iconComponent } from '../icon';\n
 const Icon${className} = iconComponent(
 <>${children}</>,
-${JSON.stringify(attributes)}
+${JSON.stringify(attributes, null, 2)}
 );\n
 export default Icon${className};\n`;
 
