@@ -1,6 +1,12 @@
 {
   "name": "tabler-icons-qwik",
   "version": "1.0.0",
+  "keywords": [
+    "tabler",
+    "icons",
+    "qwik",
+    "svg"
+  ],
   "description": "Unofficial implementation of the Tabler Icons library for Qwik.",
   "repository": "https://github.com/tscpp/tabler-icons-qwik",
   "license": "MIT",
