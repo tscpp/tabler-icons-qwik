@@ -55,7 +55,7 @@ await execa("git", [
 console.log("Bumping version...");
 const pkg = JSON.parse(readFileSync("package.json"));
 const ver = new SemVer(pkg.version).inc(relaseType);
-writeFileSync("package.json", JSON.stringify(pkg));
+writeFileSync("package.json", JSON.stringify(pkg, null, 2));
 
 // Commit changes
 console.log("Committing and tagging changes...");
