@@ -39,13 +39,12 @@ console.log(
 await $`pnpm update @tabler/icons`;
 
 // Build
-console.log("Building...");
 await import("./build.mjs");
 
 // Commit changes
 console.log("Committing changes...");
 await $`git add --all`;
-await $`git commit -m "chore: update @tabler/icons to v${updated.format()}"`;
+await $`git commit --message="chore: update @tabler/icons to v${updated.format()}"`;
 
 // Bump version
 console.log("Bumping version...");
