@@ -38,7 +38,7 @@
     "xml-js": "^1.6.11"
   },
   "peerDependencies": {
-    "@builder.io/qwik": "^1.2.6"
+    "@builder.io/qwik": "1.x"
   },
   "engines": {
     "node": ">=16.8.0 <18.0.0 || >=18.11"
