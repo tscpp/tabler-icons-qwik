@@ -23,6 +23,9 @@ await $`pnpm update @tabler/icons`;
 // Build
 await import("./build.mjs");
 
+// Format
+await execa('pnpm', ['run', 'fmt']);
+
 // Commit changes
 await $`git add --all`;
 await $`git commit -m "chore: update @tabler/icons to v${updated.format()}"`;
