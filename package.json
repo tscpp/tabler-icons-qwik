@@ -11,7 +11,6 @@
     }
   },
   "main": "./lib/esm/index.js",
-  "qwik": "./lib/esm/index.js",
   "types": "./lib/index.d.ts",
   "files": [
     "lib"
@@ -42,5 +41,6 @@
   },
   "engines": {
     "node": ">=16.8.0 <18.0.0 || >=18.11"
-  }
+  },
+  "qwik": "./lib/esm/index.js"
 }
