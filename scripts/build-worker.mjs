@@ -71,7 +71,7 @@ ${JSON.stringify(attributes)}
 export default Icon${className};\n`;
 
   writeFileSync(`src/lib/icons/${icon}.tsx`, data);
-  inputs[`lib/${icon}`] = `src/lib/icons/${icon}.tsx`;
+  inputs[`icons/${icon}`] = `src/lib/icons/${icon}.tsx`;
 
   entryData += `export { default as Icon${className} } from './icons/${icon}';\n`;
 }
