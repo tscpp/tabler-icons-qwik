@@ -11,6 +11,7 @@ import { qwikRollup as rollupQwik } from "@builder.io/qwik/optimizer";
 import { swc as rollupSwc } from "rollup-plugin-swc3";
 import { nodeResolve as rollupNodeResolve } from "@rollup/plugin-node-resolve";
 import * as tsup from "tsup";
+import { execa } from "execa";
 
 // Note! Make sure to sync with /src/icon.tsx
 const defaultAttributes = {
@@ -122,3 +123,5 @@ await tsup.build({
   silent: true,
   onSuccess: () => {},
 });
+
+await execa("pnpm", ["run", "fmt"]);
