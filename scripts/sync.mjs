@@ -2,7 +2,7 @@ import { $ } from "execa";
 import { SemVer } from "semver";
 
 // Check for updates (@tabler/icons)
-const { stdout: stdout1 } = await $`pnpm outdated @tabler/icons --json`;
+const { stdout: stdout1 } = await $({ reject: false })`pnpm outdated @tabler/icons --json`;
 const object = JSON.parse(stdout1.trim());
 
 if (!object["@tabler/icons"]) {
