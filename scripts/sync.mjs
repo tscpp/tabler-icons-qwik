@@ -1,4 +1,4 @@
-import { $ } from "execa";
+import { execa } from "execa";
 import { readFileSync, writeFileSync } from "node:fs";
 import { SemVer } from "semver";
 import { Octokit } from "@octokit/core";
@@ -18,9 +18,11 @@ const octokit = new Octokit({
 });
 
 // Check for updates (@tabler/icons)
-const { stdout: stdout1 } = await $({
-  reject: false,
-})`pnpm outdated @tabler/icons --json`;
+const { stdout: stdout1 } = await execa(
+  `pnpm`,
+  ["outdated", "@tabler/icons", "--json"],
+  { reject: false }
+);
 const object = JSON.parse(stdout1.trim());
 
 if (!object["@tabler/icons"]) {
@@ -36,15 +38,18 @@ const relaseType = previous.minor === updated.minor ? "patch" : "minor";
 console.log(
   `Version ${updated.format()} of @tabler/icons is available. Updating...`
 );
-await $`pnpm update @tabler/icons`;
+await execa("pnpm", ["update", "@tabler/icons"]);
 
 // Build
 await import("./build.mjs");
 
 // Commit changes
 console.log("Committing changes...");
-await $`git add --all`;
-await $`git commit --message="chore: update @tabler/icons to v${updated.format()}"`;
+await execa("git", ["add", "--all"]);
+await execa("git", [
+  "commit",
+  `--message="chore: update @tabler/icons to v${updated.format()}"`,
+]);
 
 // Bump version
 console.log("Bumping version...");
@@ -54,17 +59,17 @@ writeFileSync("package.json", JSON.stringify(pkg));
 
 // Commit changes
 console.log("Committing and tagging changes...");
-await $`git add --all`;
-await $`git commit -m "chore: v${ver.format()}"`;
-await $`git tag v${ver.format()}`;
+await execa("git", ["add", "--all"]);
+await execa("git", ["commit", `--message=chore: v${ver.format()}`]);
+await execa("git", ["tag", `v${ver.format()}`]);
 
 // Push changes
 console.log("Pushing to remote...");
-await $`git push -u origin`;
+await execa("git", ["push", "-u", "origin"]);
 
 // Publish version
 console.log("Publishing packages...");
-await $`npm publish`;
+await execa("npm", ["publish"]);
 
 // Create github release
 console.log("Creating github release...");
