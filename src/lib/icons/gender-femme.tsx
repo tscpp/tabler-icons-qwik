@@ -1,8 +1,15 @@
-import { iconComponent } from '../icon';
+import { iconComponent } from "../icon";
 
 const IconGenderFemme = iconComponent(
-<><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0"/><path d="M12 14v7"/><path d="M7 18h10"/></>,
-{"class":"icon icon-tabler icon-tabler-gender-femme"}
+  <>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M12 9m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
+    <path d="M12 14v7" />
+    <path d="M7 18h10" />
+  </>,
+  {
+    class: "icon icon-tabler icon-tabler-gender-femme",
+  },
 );
 
 export default IconGenderFemme;

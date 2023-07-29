@@ -1,8 +1,15 @@
-import { iconComponent } from '../icon';
+import { iconComponent } from "../icon";
 
 const IconArrowDownLeftCircle = iconComponent(
-<><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15.536 8.464l-9.536 9.536"/><path d="M6 14v4h4"/><path d="M15.586 8.414a2 2 0 1 0 2.828 -2.828a2 2 0 0 0 -2.828 2.828"/></>,
-{"class":"icon icon-tabler icon-tabler-arrow-down-left-circle"}
+  <>
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M15.536 8.464l-9.536 9.536" />
+    <path d="M6 14v4h4" />
+    <path d="M15.586 8.414a2 2 0 1 0 2.828 -2.828a2 2 0 0 0 -2.828 2.828" />
+  </>,
+  {
+    class: "icon icon-tabler icon-tabler-arrow-down-left-circle",
+  },
 );
 
 export default IconArrowDownLeftCircle;

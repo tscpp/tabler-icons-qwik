@@ -16,7 +16,7 @@ const relaseType = previous.minor === updated.minor ? "patch" : "minor";
 
 // Update @tabler/icons
 console.log(
-  `Version ${updated.format()} of @tabler/icons is available. Updating...`
+  `Version ${updated.format()} of @tabler/icons is available. Updating...`,
 );
 await $`pnpm update @tabler/icons`;
 
@@ -24,7 +24,7 @@ await $`pnpm update @tabler/icons`;
 await import("./build.mjs");
 
 // Format
-await execa('pnpm', ['run', 'fmt']);
+await execa("pnpm", ["run", "fmt"]);
 
 // Commit changes
 await $`git add --all`;
@@ -39,4 +39,4 @@ await $`git commit -m "chore: v${stdout2.trim()}"`;
 await $`git push -u origin`;
 
 // Publish version
-await $`npm publish`
+await $`npm publish`;

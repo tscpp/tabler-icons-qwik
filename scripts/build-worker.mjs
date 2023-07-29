@@ -46,7 +46,7 @@ const inputs = { index: "src/index.ts" };
 for (const icon of icons) {
   const content = readFileSync(
     `node_modules/@tabler/icons/icons/${icon}.svg`,
-    "utf8"
+    "utf8",
   );
 
   const parsed = xml2js(content);
