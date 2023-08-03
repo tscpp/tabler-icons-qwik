@@ -1,8 +1,10 @@
 # Tabler Icons for Qwik
 
+![sync workflow](https://github.com/tscpp/tabler-icons-qwik/actions/workflows/sync.yml/badge.svg)
+
 Unofficial implementation of the [Tabler Icons](https://tabler-icons.io)
 library for Qwik applications. The package is automatically synced with
-`@tabler/icons` two times every day.
+`@tabler/icons` two times every day. See the above badge.
 
 See <https://tabler-icons.io>, or <https://github.com/tabler/tabler-icons> for
 more information.
