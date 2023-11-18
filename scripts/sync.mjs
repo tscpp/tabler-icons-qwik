@@ -14,6 +14,10 @@ if (!GITHUB_TOKEN) {
   console.error(`Missing GITHUB_TOKEN.`);
 }
 
+if (!NODE_AUTH_TOKEN || !GITHUB_TOKEN) {
+  process.exit(1);
+}
+
 const octokit = new Octokit({
   auth: GITHUB_TOKEN,
 });
@@ -22,7 +26,7 @@ const octokit = new Octokit({
 const { stdout: stdout1 } = await execa(
   `pnpm`,
   ["outdated", "@tabler/icons", "--json"],
-  { reject: false },
+  { reject: false }
 );
 const object = JSON.parse(stdout1.trim());
 
@@ -37,7 +41,7 @@ const relaseType = previous.minor === updated.minor ? "patch" : "minor";
 
 // Update @tabler/icons
 console.log(
-  `Version ${updated.format()} of @tabler/icons is available. Updating...`,
+  `Version ${updated.format()} of @tabler/icons is available. Updating...`
 );
 await execa("pnpm", ["update", "@tabler/icons"]);
 
