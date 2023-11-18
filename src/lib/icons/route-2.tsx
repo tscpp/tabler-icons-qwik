@@ -3,10 +3,8 @@ import { iconComponent } from "../icon";
 const IconRoute2 = iconComponent(
   <>
     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-    <path d="M3 17l4 4" />
-    <path d="M7 17l-4 4" />
-    <path d="M17 3l4 4" />
-    <path d="M21 3l-4 4" />
+    <path d="M3 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+    <path d="M19 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4z" />
     <path d="M14 5a2 2 0 0 0 -2 2v10a2 2 0 0 1 -2 2" />
   </>,
   {
