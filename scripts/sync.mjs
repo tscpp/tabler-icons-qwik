@@ -2,6 +2,7 @@ import { execa } from "execa";
 import { readFileSync, writeFileSync } from "node:fs";
 import { SemVer } from "semver";
 import { Octokit } from "@octokit/core";
+import { build } from "./build.mjs";
 
 const { NODE_AUTH_TOKEN, GITHUB_TOKEN } = process.env;
 
@@ -41,7 +42,7 @@ console.log(
 await execa("pnpm", ["update", "@tabler/icons"]);
 
 // Build
-await import("./build.mjs");
+await build();
 
 // Commit changes
 console.log("Committing changes...");
@@ -54,14 +55,14 @@ await execa("git", [
 // Bump version
 console.log("Bumping version...");
 const pkg = JSON.parse(readFileSync("package.json"));
-const ver = new SemVer(pkg.version).inc(relaseType);
+pkg.version = new SemVer(pkg.version).inc(relaseType).format();
 writeFileSync("package.json", JSON.stringify(pkg, null, 2));
 
 // Commit changes
 console.log("Committing and tagging changes...");
 await execa("git", ["add", "--all"]);
-await execa("git", ["commit", `--message=chore: v${ver.format()}`]);
-await execa("git", ["tag", `v${ver.format()}`]);
+await execa("git", ["commit", `--message=chore: v${pkg.version}`]);
+await execa("git", ["tag", `v${pkg.version}`]);
 
 // Push changes
 console.log("Pushing to remote...");
@@ -76,7 +77,7 @@ console.log("Creating github release...");
 await octokit.request("POST /repos/{owner}/{repo}/releases", {
   owner: "tscpp",
   repo: "tabler-icons-qwik",
-  tag_name: `v${ver.format()}`,
+  tag_name: `v${pkg.version}`,
   generate_release_notes: true,
   headers: {
     "X-GitHub-Api-Version": "2022-11-28",
