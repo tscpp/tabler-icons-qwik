@@ -49,7 +49,7 @@ console.log("Committing changes...");
 await execa("git", ["add", "--all"]);
 await execa("git", [
   "commit",
-  `--message="chore: update @tabler/icons to v${updated.format()}"`,
+  `--message=chore: update @tabler/icons to v${updated.format()}`,
 ]);
 
 // Bump version
