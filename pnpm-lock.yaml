@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^15.1.0
     version: 15.1.0(rollup@3.26.3)
   '@tabler/icons':
-    specifier: ^2.45.0
-    version: 2.45.0
+    specifier: ^2.46.0
+    version: 2.46.0
   execa:
     specifier: ^7.2.0
     version: 7.2.0
@@ -804,8 +804,8 @@ packages:
       defer-to-connect: 2.0.1
     dev: true
 
-  /@tabler/icons@2.45.0:
-    resolution: {integrity: sha512-J10UDghOni9wlrj5CpKAzychDCABCKYq897mGg0wGFsd+tYLaUdz0dt/HZeGnV8gZJo0hIiTPLGwBp5EW42Qsg==}
+  /@tabler/icons@2.46.0:
+    resolution: {integrity: sha512-Q5G8Pj5IO+Uhc6pszpu5/hGYY018JwEzzvmuqr+gKJtfIvAHA3umpwUilMRLEy89p+WCP+YsDhicMhfBCCv1qA==}
     dev: true
 
   /@types/cacheable-request@6.0.3:
