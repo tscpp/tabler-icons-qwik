@@ -1,3 +1,11 @@
+---
+
+# ⚠️ NO LONGER MAINTAINED
+
+See https://github.com/qwikest/icons.
+
+---
+
 # Tabler Icons for Qwik
 
 ![sync workflow](https://github.com/tscpp/tabler-icons-qwik/actions/workflows/sync.yml/badge.svg)
